@@ -304,19 +304,26 @@ public class sudoku01
             this.setTitle("SUDOKU--pmkvy project");
             this.setSize(420, 420);
             this.setLocationRelativeTo(null);
-            // this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            jb = new JButton("CLICK TO START!");
-            jb.setFont(font);
-            jb.setForeground(new Color((float)Math.random(),(float)Math.random(),(float)Math.random(),(float)1.0));
-            jb.setBackground(new Color((float)Math.random(),(float)Math.random(),(float)Math.random(),(float)0.5));
-            this.add(jb,BorderLayout.SOUTH);
-
+            this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            
              img = new ImageIcon("phot/sudokuImg02.gif");
              
              jl = new JLabel(img);
              this.add(jl, BorderLayout.CENTER);
              changeFramelistener l = new changeFramelistener(this);
+            this.setVisible(true);
+
+            try{
+            Thread.sleep(6000);
+            }catch(Exception em){}
+
+             jb = new JButton("CLICK TO START!");
+             jb.setFont(font);
+             jb.setForeground(new Color((float)Math.random(),(float)Math.random(),(float)Math.random(),(float)1.0));
+             jb.setBackground(new Color((float)Math.random(),(float)Math.random(),(float)Math.random(),(float)0.5));
+             this.add(jb,BorderLayout.SOUTH);
             jb.addActionListener(l);
+
             this.setVisible(true);
         }
     }
