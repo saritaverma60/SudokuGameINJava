@@ -35,7 +35,7 @@ public class sudoku01
         JPanel backPanel,b[]= new JPanel[9];
 
         backPanel = new JPanel();
-        backPanel.setBackground(new Color(0,0,0));
+        backPanel.setBackground(Color.GRAY);
         backPanel.setLayout(new GridLayout(3,3,3,2));
 
         for( i = 0; i < 9; i++)
