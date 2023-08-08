@@ -35,7 +35,7 @@ public class sudoku01
         JPanel backPanel,b[]= new JPanel[9];
 
         backPanel = new JPanel();
-        backPanel.setBackground(Color.GRAY);
+        backPanel.setBackground(Color.BLACK);
         backPanel.setLayout(new GridLayout(3,3,3,2));
 
         for( i = 0; i < 9; i++)
@@ -365,7 +365,7 @@ public class sudoku01
             this.setResizable(false);
             this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-            switch((int)(1+Math.random()*3)){
+            switch((int)(Math.random()*3)){
                 case 1:
                 imgUrl = "phot/giphy.gif";
                 break;
@@ -587,7 +587,7 @@ public class sudoku01
        // RANDOME HIDE
         for(int block = 0; block<9;block++){
             // int block = (int)(Math.random()*9);
-            for(int i =0; i<5;i++){
+            for(int i =0; i<4;i++){
                 int row = (int)(Math.random()*3);
                 int column = (int)(Math.random()*3);
                 currentQuestionSet[block][row][column] = 0 ;
