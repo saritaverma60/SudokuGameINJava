@@ -365,7 +365,11 @@ public class sudoku01
             this.setResizable(false);
             this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-            switch((int)(Math.random()*3)){
+            int rand= 1+(int)(Math.random()*9);
+            System.out.print("gif no :"+ rand);
+
+            switch( rand ){
+
                 case 1:
                 imgUrl = "phot/giphy.gif";
                 break;
@@ -375,7 +379,32 @@ public class sudoku01
                 break;
 
                 case 3:
-                imgUrl = "phot/tenor1.gif";
+                imgUrl = "phot/khusi.gif";
+                break;  
+
+                case 4:
+                imgUrl = "phot/humJeetGaye.gif";
+                break;
+
+                case 5:
+                imgUrl = "phot/miracle.gif";
+                break;
+
+                case 6:
+                imgUrl = "phot/noice.gif";
+                break;
+
+                case 7:
+                imgUrl = "phot/shabaas.gif";
+                break;
+
+                case 8:
+                imgUrl = "phot/winnerChickenDinner.gif";
+                break;
+
+                case 9:
+                imgUrl = "phot/applause.gif";
+                break;
 
                 default:
                 imgUrl = "phot/sudokuImg02.gif";
@@ -587,7 +616,7 @@ public class sudoku01
        // RANDOME HIDE
         for(int block = 0; block<9;block++){
             // int block = (int)(Math.random()*9);
-            for(int i =0; i<4;i++){
+            for(int i =0; i<5;i++){
                 int row = (int)(Math.random()*3);
                 int column = (int)(Math.random()*3);
                 currentQuestionSet[block][row][column] = 0 ;
