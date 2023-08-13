@@ -64,8 +64,18 @@ public class sudoku01
                           ((AbstractDocument) permText.getDocument()).setDocumentFilter(new SudokuDocumentFilter());
 
                           permText.addKeyListener(new KeyListener() {
+                            
+                            @Override
+                            public void keyTyped(KeyEvent e){
+                            }
+
+                            
+                            @Override
+                            public void keyPressed(KeyEvent e){
+                            }
+
                             @Override 
-                            public void keyPressed(KeyEvent e)
+                            public void keyReleased(KeyEvent e)
                             {
                                 /*----Input--Validation--Check---- */
                                 System.out.println("block : " + block+" row : "+row + " col : " + col);
@@ -108,13 +118,7 @@ public class sudoku01
 
                             }
                             
-                            @Override
-                            public void keyTyped(KeyEvent e){
-                            }
 
-                            @Override
-                            public void keyReleased(KeyEvent e){
-                            }
 
                           });
 
