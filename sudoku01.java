@@ -63,15 +63,25 @@ public class sudoku01
                         int col = k;
                           ((AbstractDocument) permText.getDocument()).setDocumentFilter(new SudokuDocumentFilter());
 
-                          permText.addActionListener(new ActionListener() {
+                          permText.addKeyListener(new KeyListener() {
+                            
+                            @Override
+                            public void keyTyped(KeyEvent e){
+                            }
+
+                            
+                            @Override
+                            public void keyPressed(KeyEvent e){
+                            }
+
                             @Override 
-                            public void actionPerformed(ActionEvent e)
+                            public void keyReleased(KeyEvent e)
                             {
                                 /*----Input--Validation--Check---- */
                                 System.out.println("block : " + block+" row : "+row + " col : " + col);
 
-                                String val = permText.getText();
                                 int v =0;
+                                String val = permText.getText();
                                 try {
                                      v = Integer.parseInt(val);
                                     
@@ -85,8 +95,8 @@ public class sudoku01
                                 // arr[block][row][col] = v;
                                 //dv
 
-                                boolean valid = isUnique(block, row, col, v);
-                                if(valid == true)
+                                // boolean valid = ;
+                                if(isUnique(block, row, col, v))
                                 {
                                     permText.setForeground(Color.GREEN);
                                     permText.setBorder( BorderFactory.createLineBorder(Color.black, 1, false));
@@ -107,15 +117,16 @@ public class sudoku01
                                 }
 
                             }
+                            
+
+
                           });
 
                         b[i].add(permText);
                         
                         
-                        
                     } 
-                    else
-                    {
+                    else{
                          Font font = new Font("Comic Sans MS", Font.BOLD,18);
                         JLabel permLabel = new JLabel();
                         permLabel.setFont(font);
