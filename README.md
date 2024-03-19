@@ -4,10 +4,25 @@ The project is in intial development. Please read the following instructions car
 
 ## Objective
 <!--Create objective of the project -->
+The objective of the project is to create a nice looking sudoku player application. The project Development includes following sub-steps:
+- **Appealing UI** ❌
+- - Welcome screeen ❌
+  - Main game play screen ❌<!-- include main play UI, username popup, play/pause/restart popup-->
+  - Leaderboards screen ❌
+- **Sudoku Generation** ❌
+- - Using Web API ❌
+  - Using self implemeted Generating Class ❌
+- **Functionality Development** ❌
+- - Integration of UI with Sudoku generator ❌
+  - Player Managemnet ❌<!-- allow player name, highscore/leaderboards(implement using JDBC) etc. features-->
+  - Game play management ❌<!-- allow restart, configure game difficulty and time of game play-->
+  
 
 ## Contributions
 <!--how to 
           gain contribution access
+                    for new contributors
+                    for existing contributors
           build project
           run project-->
 ## File structure
@@ -15,3 +30,11 @@ The project is in intial development. Please read the following instructions car
 
 ## Contacts
 <!--add contributor/owners' contacts-->
+### Sarita Verma
+- Role: Owner / Project Manager
+- Email:
+  
+#### Divyanshu Yadav
+- Role: Contributor
+- Email: [divyanshuy858@gmail.com](mailto:divyanshuy858@gmail.com)
+- Linkedin: [DVyadav2307](https://www.linkedin.com/in/dvyadav2307)
