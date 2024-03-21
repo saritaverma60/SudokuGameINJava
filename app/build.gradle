@@ -47,9 +47,9 @@ application {
 task  createJar(type: Jar) {
     // Create sharable jar with all dependency included
     manifest {
-        attributes 'Main-Class': 'io.github.dvyadav.weathernow.Launcher'
+        attributes 'Main-Class': 'io.github.dvyadav.sudokufx.Launcher'
     }
-    archiveBaseName = 'WeatherNow'
+    archiveBaseName = 'SudokuFX'
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
     with jar
