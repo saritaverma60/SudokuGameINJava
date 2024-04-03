@@ -1,8 +1,9 @@
 package io.github.dvyadav.sudokufx;
 
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 public class Main extends Application{
@@ -13,7 +14,14 @@ public class Main extends Application{
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        primaryStage.setScene(new Scene(new Label("HELLO WORLD")));
+        Parent root   = FXMLLoader.load(getClass().getResource("GameGridUI.fxml"));
+
+        Scene scene = new Scene(root);
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("SudokuFX");
+        primaryStage.setMaximized(true);
+        primaryStage.setMinWidth(700);
+
         primaryStage.show();
     }
 }
