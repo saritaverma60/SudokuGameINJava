@@ -7,7 +7,7 @@ The project is in intial development. Please read the following instructions car
 The objective of the project is to create a nice looking sudoku player application. The project Development includes following sub-steps:
 - **Appealing UI** ❌
 - - Welcome screeen ❌
-  - Main game play screen ❌<!-- include main play UI, username popup, play/pause/restart popup-->
+  - Main game play screen 🛠<!-- include main play UI, username popup, play/pause/restart popup-->
   - Leaderboards screen ❌
 - **Sudoku Generation** ❌
 - - Using Web API ❌
