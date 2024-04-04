@@ -40,7 +40,7 @@ The project SudokuFX is open for contributions and useful contributions are appr
 
 - Push the changes if editted in local using following then Open the pull request.
 
-      git push`.
+      git push.
 
 ### Existing Contributors
 Exiting contributors are directly contributing to project and don't need to fork the repo or open pull requests. They are free to make and commit changes. To do so:
@@ -67,7 +67,7 @@ Only ensure that you have:
 - JDK 17 or above
 
 ### Build Project
-Run the following after Cloning the project to your local machine. Replace the ` gardlew` with `gradle` if running on Linux or Mac
+Run the following after Cloning the project to your local machine. Replace the `gardlew` with `gradle` if running on Linux or Mac
 
       gradlew build 
 
@@ -80,7 +80,7 @@ Use follwoing to run the gradle project. Replace `gradlew` with `gradle` on Linu
       gradlew run
 
 ### Creating Sharable Jar
-The [build.gradle](app\build.gradle) contains code block to make a sharable Jar with all dependency included. This Jar is created and stored in [libs](app\build\libs) folder with SudokuFX name. <br>
+The [build.gradle](app/build.gradle) contains code block to make a sharable Jar with all dependency included. This Jar is created and stored in [app/build/libs](app/build/libs) folder with SudokuFX name. <br>
 Run the following to create a sharable jar. Replace `gradlew` with `gradle` on Linux or Mac.
 
 
@@ -102,3 +102,8 @@ Run the following to create a sharable jar. Replace `gradlew` with `gradle` on L
 - Role: Contributor
 - Email: [divyanshuy858@gmail.com](mailto:divyanshuy858@gmail.com)
 - Linkedin: [DVyadav2307](https://www.linkedin.com/in/dvyadav2307)
+
+#### Neeraj Sharma
+- Role: Contributor
+- Email: [neerajsharma198118131@gmail.com](mailto:neerajsharma198118131@gmail.com)
+- Linkedin: [neeraj-sharma-08874124b](https://www.linkedin.com/in/neeraj-sharma-08874124b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
