@@ -1,24 +1,28 @@
-# SUDOKUFX
+# 🎮 SUDOKUFX
 **SudokuFX** is java based Sudoku game which is aimed to be desiged using JavaFX.<br>
 The project is in intial development. Please read the following instructions carefully:-
 
-## Objective
+## 📥 Installation
+<!-- Add installation steps and documenations after first game realese -->
+
+## 🎯 Objective
 <!--Create objective of the project -->
 The objective of the project is to create a nice looking sudoku player application. The project development includes following sub-steps:
 - **Appealing UI** 🛠
-- - Welcome screeen ❌
-  - Main game play screen 🛠<!-- include main play UI, username popup, play/pause/restart popup-->
+  - Welcome screeen 🛠
+  - username Pop-up 🛠
+  - Main game play screen 🛠<!-- include main-play UI with play/pause/restart popup-->
   - Leaderboards screen ❌
 - **Sudoku Generation** ❌
-- - Using Web API ❌
+  - Using Web API ❌
   - Using self implemeted Generating Class ❌
 - **Functionality Development** ❌
-- - Integration of UI with Sudoku generator ❌
+  - Integration of UI with Sudoku generator ❌
   - Player Managemnet ❌<!-- allow player name, highscore/leaderboards(implement using JDBC) etc. features-->
-  - Game play management ❌<!-- allow restart, configure game difficulty and time of game play-->
+  - Game play management ❌<!-- allow restart, save, load and configure game difficulty and time of game play-->
   
 
-## Contributions
+## 🤝 Contributions
 
 The project SudokuFX is open for contributions and useful contributions are appreciable. You can also open an issue for any bug or for any desired features that shoud be included.
 <br>
@@ -61,7 +65,7 @@ Exiting contributors are directly contributing to project and don't need to fork
 
 Note: Request to [Contacts](#contacts) to gain internal contribitor access. (Only available to PMKVY students).
 
-## Getting Started
+## 🚀 Getting Started
 The java project is developed using gradle build tool. You do not need any extenal dependency or libraries for project, Gradle will manage all.<br>
 Only ensure that you have:
 - JDK 17 or above
@@ -86,13 +90,36 @@ Run the following to create a sharable jar. Replace `gradlew` with `gradle` on L
 
       gradlew createJar
 
-### Installations
-<!-- Add installation steps and documenations after first game realese -->
 
-## File structure
+## 📂File structure
 <!--Explain what each file is for with liks to the file-->
+### Directories
+- [app](app): holds directories and files relevent to application.
+  - [java](app/src/main/java): consists java files and hodls logical insterest.
+  - [resources](app/src/main/resources): consists Image directories and XMLs of UI interest
+- [gradle](gradle): holds gradle config files
 
-## Contacts
+### Files
+
+- **Main Classes**
+  - [Launcher.java](app/src/main/java/io/github/dvyadav/sudokufx/Launcher.java): Entrypoint in Jar and invokes the application.
+  - [Main.java](app/src/main/java/io/github/dvyadav/sudokufx/Main.java): Initilizes the app UI, manages the app window.
+
+- **Controller Classes**
+  - [GameGridController.java](app/src/main/java/io/github/dvyadav/sudokufx/GameGridController.java): holds definitions for controls on `GameGrid.fxml`
+  - [UsernamePopupUIController.java](app/src/main/java/io/github/dvyadav/sudokufx/UsernamePopupUIController.java): holds definitions for controls on `UsernamePopupUI.fxml`
+  - [WelcomePageUIController.java](app/src/main/java/io/github/dvyadav/sudokufx/WelcomePageUIController.java): holds definitons for controls on `WelcomePageUI.fxml`
+
+- **XMLs**
+  - [GameGrid.fxml](app/src/main/resources/io/github/dvyadav/sudokufx/GameGridUI.fxml): Actual GamePlay UI
+  - [UsernamePopup.fxml](app/src/main/resources/io/github/dvyadav/sudokufx/UsernamePopupUI.fxml): User Name input UI
+  - [WelcomePage.fxml](app/src/main/resources/io/github/dvyadav/sudokufx/WelcomePageUI.fxml): Landing Page UI of application
+
+- **Gradle-Specific**
+  - [build.gradle](app/build.gradle): Manages project dependecies.
+  - [gradle-wrapper.properties](gradle/wrapper/gradle-wrapper.properties): defines gradle settings e.g. version etc.
+  - [settings.gradle](settings.gradle): project settings for gradle interest.
+## 👩‍👦‍👦 Contacts
 <!--add contributor/owners' contacts-->
 ### Sarita Verma
 - Role: Owner / Project Manager

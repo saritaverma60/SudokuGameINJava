@@ -14,13 +14,14 @@ public class Main extends Application{
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root   = FXMLLoader.load(getClass().getResource("GameGridUI.fxml"));
+        Parent root   = FXMLLoader.load(getClass().getResource("WelcomePageUI.fxml"));
 
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.setTitle("SudokuFX");
         primaryStage.setMaximized(true);
         primaryStage.setMinWidth(700);
+
 
         primaryStage.show();
     }
