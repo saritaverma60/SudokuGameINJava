@@ -12,7 +12,7 @@ The objective of the project is to create a nice looking sudoku player applicati
   - Welcome screeen 🛠
   - username Pop-up 🛠
   - Main game play screen 🛠<!-- include main-play UI with play/pause/restart popup-->
-  - Leaderboards screen ❌
+  - Leaderboards screen 🛠
 - **Sudoku Generation** ❌
   - Using Web API ❌
   - Using self implemeted Generating Class ❌
