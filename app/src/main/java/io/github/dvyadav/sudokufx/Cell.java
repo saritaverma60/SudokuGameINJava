@@ -1,18 +1,20 @@
-package io.github.dvyadav.sudokufx.GameObjects;
+package io.github.dvyadav.sudokufx;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Cell {
     
+    private static int objectCounter = 0;
+
     //identity-number of cell
-    int cellId;
+    private int cellId = 0;
 
     //list of valid values
-    List<Integer> validValues = new ArrayList<>();
+    private List<Integer> validValues = new ArrayList<>();
 
     // cell self-value
-    int value;
+    private int value = 0;
 
 
 
@@ -20,15 +22,28 @@ public class Cell {
     Cell(){
 
         //assign cellID
-        cellId++;
+        objectCounter++;
+        cellId = objectCounter;
 
         refillValidValues();
     }
 
-    // cell should have some permissible values while its creation
-    void refillValidValues(){
+    public int getCellId(){
+        return this.cellId;
+    }
 
-        for(int i = 0 ; i < 9; i++){
+    public int getCellValue(){
+        return this.value;
+    }
+
+    public boolean isValidValuesEmpty(){
+        return validValues.isEmpty();
+    }
+
+    // cell should have some permissible values while its creation
+    public void refillValidValues(){
+
+        for(int i = 1 ; i <= 9; i++){
             validValues.add(i);
         }
         
@@ -36,7 +51,7 @@ public class Cell {
 
 
     //return false if no-more number can be elimianated i.e. list is empty
-    boolean removevalidNumber(int num){
+    public boolean removevalidNumber(int num){
 
         if(validValues.size() < 1){
             return false;
@@ -47,7 +62,11 @@ public class Cell {
     }
 
 
-    void setNewcellValue(){
+    public void setNewCellValue(){
+        if(validValues.isEmpty()){
+            value = 0;
+            return;
+        }
         value = validValues.get((int)(Math.random() * validValues.size()));
     }
 
