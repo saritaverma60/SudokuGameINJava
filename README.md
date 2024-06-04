@@ -13,9 +13,9 @@ The objective of the project is to create a nice looking sudoku player applicati
   - username Pop-up 🛠
   - Main game play screen 🛠<!-- include main-play UI with play/pause/restart popup-->
   - Leaderboards screen 🛠
-- **Sudoku Generation** ❌
-  - Using Web API ❌
-  - Using self implemeted Generating Class ❌
+- **Sudoku Generation** ✅
+  - ~~Using Web API~~ 
+  - Using self implemeted Generating Class ✅
 - **Functionality Development** ❌
   - Integration of UI with Sudoku generator ❌
   - Player Managemnet ❌<!-- allow player name, highscore/leaderboards(implement using JDBC) etc. features-->

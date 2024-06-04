@@ -30,7 +30,7 @@
                <children>
                   <StackPane prefHeight="150.0" prefWidth="200.0">
                      <children>
-                        <Button fx:id="newGameButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="300.0" text="New Game">
+                        <Button fx:id="newGameButton" mnemonicParsing="false" onAction="#setNewGame" prefHeight="50.0" prefWidth="300.0" text="New Game">
                            <font>
                               <Font size="15.0" />
                            </font>

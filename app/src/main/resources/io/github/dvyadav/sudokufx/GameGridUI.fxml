@@ -184,7 +184,7 @@
                      <children>
                         <Button fx:id="one" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="104.0" prefWidth="156.0" text="Undo" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" />
                         <Button fx:id="two" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="152.0" prefWidth="184.0" text="Hint" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" />
-                        <Button fx:id="three" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="139.0" prefWidth="155.0" text="Note" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS" />
+                        <Button fx:id="printButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#print" prefHeight="139.0" prefWidth="155.0" text="Note" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS" />
                         <Button fx:id="four" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="115.0" prefWidth="143.0" text="Erase" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS" />
                      </children>
                   </GridPane>

@@ -14,7 +14,7 @@ public class Main extends Application{
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root   = FXMLLoader.load(getClass().getResource("LeaderBoardsUI.fxml"));
+        Parent root   = FXMLLoader.load(getClass().getResource("WelcomePageUI.fxml"));
 
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
@@ -26,3 +26,12 @@ public class Main extends Application{
         primaryStage.show();
     }
 }
+
+
+/* 1-> welcome page
+ *      new game  ----> ask for difficluty ---> GameGrid
+ *      load previous --> GameGrid
+ *       Leaderboards ---> leaderboardsUI
+ *      settings ----> settingsUI
+ *      quit ---->system.exit
+ */

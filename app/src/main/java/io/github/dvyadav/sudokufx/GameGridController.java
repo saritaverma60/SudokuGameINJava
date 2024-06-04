@@ -5,12 +5,19 @@ import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 
 public class GameGridController implements Initializable {
+
+    GridNumbers gridNumbers;
+
+    //values already set from Weclome Page controller
+    int[][] gameGridNumberArray;
+    int[][] gameGridSolutionArray;
 
     @FXML
     StackPane backgroungStackPane;
@@ -33,9 +40,21 @@ public class GameGridController implements Initializable {
     @FXML
     GridPane controlButtonGridPane;
 
+    @FXML
+    Button printButton;
 
 
-    
+    public void setGridNumbers(GridNumbers gridNumbers){
+        this.gridNumbers = gridNumbers;
+    }
+
+    public void setGameGridNumberArray(int[][] gameGridNumber){
+        this.gameGridNumberArray = gameGridNumber;
+    }
+
+    public void setGameGridSolutionArray(int[][] gameGridSolution){
+        this.gameGridSolutionArray = gameGridSolution;
+    }
 
 
     @Override
@@ -56,6 +75,23 @@ public class GameGridController implements Initializable {
         
 
         
+    }
+
+    
+    public void print(){
+        for (int i = 0; i < gameGridNumberArray.length; i++) {
+            for (int j = 0; j < gameGridNumberArray.length; j++) {
+                System.out.print(gameGridNumberArray[i][j] +", ");
+            }
+        }
+
+        System.out.println("\n\n");
+
+        for (int i = 0; i < gameGridSolutionArray.length; i++) {
+            for (int j = 0; j < gameGridSolutionArray.length; j++) {
+                System.out.print(gameGridSolutionArray[i][j] +", ");
+            }
+        }
     }
     
 }
