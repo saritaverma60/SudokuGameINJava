@@ -2,14 +2,11 @@ package io.github.dvyadav.sudokufx;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -19,12 +16,10 @@ import javafx.stage.Stage;
 
 public class WelcomePageController implements Initializable {
 
-    private ExecutorService executorService = Executors.newCachedThreadPool();
-
     private GridNumbers gridNumbers = new GridNumbers();
     private int[][] gridNumbersArray = gridNumbers.getGridNumbersArray();
 
-    private int gameDifficulty = 3;/* <--- TODO: set it to 0 */
+    private int gameDifficulty = 0;
     boolean returnValueDifficultyMethod = true; //declared here only beacuse of scope limitations
 
     @FXML
@@ -63,19 +58,49 @@ public class WelcomePageController implements Initializable {
     }
     
     
-    public void setNewGame(ActionEvent e)throws Exception{
-
-        //sets difficulty and return false if not choosen any level
-
-        setDifficulty();
     
+    public void showDifficultyPopup(ActionEvent e)throws Exception{
+
+        Stage difficultyPopupWindow = new Stage();
+        FXMLLoader loader  = new FXMLLoader(getClass().getResource("DifficultyLevelPopupUI.fxml"));
+        loader.setController(this);
+
+        Parent root  = loader.load();
+        Scene scene = new Scene(root);
+    
+        difficultyPopupWindow.setScene(scene);
+        difficultyPopupWindow.setResizable(false);
+        difficultyPopupWindow.centerOnScreen();
+        difficultyPopupWindow.show();
+    }
+
+    public void setDifficulty(ActionEvent e) throws Exception {
+       
+        String level = ((Button)e.getSource()).getText();
+
+        if(level.equals("Easy")){
+            gameDifficulty = 1;
+        }else if(level.equals("Medium")){
+            gameDifficulty = 2;
+        }else if(level.equals("Hard")){
+            gameDifficulty = 3;
+        }
+
+        Stage difficultyPopupWindow = (Stage)(((Button)e.getSource()).getScene().getWindow());
+        difficultyPopupWindow.close();
+
+        setNewGame();
+    }
+
+    public void setNewGame()throws Exception{
+
         FXMLLoader loader = new FXMLLoader(getClass().getResource("GameGridUI.fxml"));
         Parent root = loader.load(); //also creates controller object
 
         //this object helps to access the gridNumber array of sudoku at GameGridPage
         GameGridController gameGridController = loader.getController();
         gameGridController.setGameGridSolutionArray(getCloneArrayOf(gridNumbersArray));
-        gameGridController.setGridNumbers(gridNumbers);
+        gameGridController.setGridNumbers(gridNumbers); //transferring gridNumber object to acces its methods
         
         if(gameDifficulty == 1){
             //easy mode
@@ -88,22 +113,17 @@ public class WelcomePageController implements Initializable {
             gameGridController.setGameGridNumberArray(getGameGridArray(gameDifficulty * 3 - 4));
         }
 
-        Stage primaryStage = (Stage)(((Node)(e.getSource())).getScene().getWindow());
+        Stage primaryStage = (Stage)((newGameButton).getScene().getWindow());
         primaryStage.setScene(new Scene(root));
         primaryStage.setMaximized(false); // resolves the
         primaryStage.setMaximized(true);  // smallscreen bug
         primaryStage.show();
 
 
-
     }
+    
 
-    public void setDifficulty(){
-       
-        // open new window
-
-    }
-
+    /* TODO:COMPLETE THE ACTIONS OF THE BUTTONS BELOW */
     public void loadPreviousMatch(ActionEvent e){
 
     }
